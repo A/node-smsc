@@ -2,14 +2,9 @@
 
 ```JS
 var Sender = require('smsc');
-var sender = new Sender({
-  // Your credentials from http://www.smsc.ru
-  user: 'seryoja',
-  password: '0po98iu7'
-});
+var sender = new Sender('seryoja', '0po98iu7');
 
-sender.sms(79223435363, fucntion (err, message) {
+sender.sms(79223438450, 'How are you?', function (err) {
   console.log(err);
-  console.log(message);
 });
 ```

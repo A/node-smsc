@@ -15,20 +15,22 @@ var http                = require('http');
  *                         .login
  *                         .password
  */
-var Sender = module.exports = function (credentials) {
-  this.credentials      = credentials;
-
+var Sender = module.exports = function (login, passwd) {
+  this.credentials = {
+    login: login,
+    passwd: passwd
+  };
 };
 
 
 Sender.prototype.sms = function(phones, message, cb) {
   var uri = [
     'www.smsc.ru/sys/send.php?login=', this.credentials.login,
-    '&psw=', this.credentials.password,
+    '&psw=', this.credentials.passwd,
     '&phones=', phones,
     '&mes=', message,
-    '&sender=chat&charset=utf-8'
-  ];
+    '&charset=utf-8'
+  ].join('');
   this.request(uri, cb);
 };
 
