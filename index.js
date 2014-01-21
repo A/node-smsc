@@ -9,17 +9,13 @@ var http                = require('http');
 // End of dependencies.
 
 
-module.exports = function () {
-
-};
-
 /**
  * 
  * @param {Object} credentials 
  *                         .login
  *                         .password
  */
-var Sender = function (credentials) {
+var Sender = module.exports = function (credentials) {
   this.credentials      = credentials;
 
 };

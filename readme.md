@@ -1,7 +1,7 @@
 # Simply SMSC API implementation for NodeJS
 
 ```JS
-var Sender = require('node-smsc');
+var Sender = require('smsc');
 var sender = new Sender({
   // Your credentials from http://www.smsc.ru
   user: 'seryoja',
