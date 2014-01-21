@@ -37,8 +37,8 @@ Sender.prototype.sms = function(phones, message, cb) {
 };
 
 
-Sender.prototype.request = function(options, cb) {
-  http.get('http://www.google.com/index.html', function(res) {
+Sender.prototype.request = function(uri, cb) {
+  http.get(uri, function(res) {
     cb(null, res);
   }).on('error', function(err) {
     cb(err);
