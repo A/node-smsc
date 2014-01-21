@@ -1,0 +1,24 @@
+{
+  "name": "smsc",
+  "version": "0.1.0",
+  "description": "Poorly SMSC API implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shuvalov-anton/node-smsc.git"
+  },
+  "keywords": [
+    "sms",
+    "api",
+    "smsc"
+  ],
+  "author": "Anton Shuvalov <anton_shuvalov@me.com> (http://anton-shuvalov.info)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuvalov-anton/node-smsc/issues"
+  },
+  "homepage": "https://github.com/shuvalov-anton/node-smsc"
+}
