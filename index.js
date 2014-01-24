@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var http                = require('http');
-
+var querystring         = require("querystring");
 
 // End of dependencies.
 
@@ -25,10 +25,10 @@ var Sender = module.exports = function (login, passwd) {
 
 Sender.prototype.sms = function(phones, message, cb) {
   var uri = [
-    'www.smsc.ru/sys/send.php?login=', this.credentials.login,
+    'http://www.smsc.ru/sys/send.php?login=', this.credentials.login,
     '&psw=', this.credentials.passwd,
     '&phones=', phones,
-    '&mes=', message,
+    '&mes=', querystring.escape(message),
     '&charset=utf-8'
   ].join('');
   this.request(uri, cb);
